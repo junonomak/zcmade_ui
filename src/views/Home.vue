@@ -1,21 +1,12 @@
 <template>
-    <div>
-        <h2>{{num}}</h2>
-    </div>
+    <div class="content"></div>
+    <c-button></c-button>
 </template>
 
-<script>
-    export default {
-    name:'',
-    data () {
-        return {
-            num
-        }
-    },
-    components: {
+<script setup>
+import cButton from '../components/c-button.vue'
 
-    }
-    }
+
 </script>
 
 <style scpoed>
