@@ -1,0 +1,58 @@
+{
+  "id": "3570901",
+  "name": "cmade-icon",
+  "font_family": "cmade-icon",
+  "css_prefix_text": "i-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "14732",
+      "name": "向下",
+      "font_class": "down",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "136387",
+      "name": "下载",
+      "font_class": "download",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "1727422",
+      "name": "205设置",
+      "font_class": "setting",
+      "unicode": "e8b8",
+      "unicode_decimal": 59576
+    },
+    {
+      "icon_id": "1727541",
+      "name": "308上一页、后退、返回",
+      "font_class": "left",
+      "unicode": "e8ef",
+      "unicode_decimal": 59631
+    },
+    {
+      "icon_id": "1727542",
+      "name": "309下一页、前进、查看更多",
+      "font_class": "right",
+      "unicode": "e8f1",
+      "unicode_decimal": 59633
+    },
+    {
+      "icon_id": "6337455",
+      "name": "点赞",
+      "font_class": "like",
+      "unicode": "ec7f",
+      "unicode_decimal": 60543
+    },
+    {
+      "icon_id": "7127384",
+      "name": "加载",
+      "font_class": "loding",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    }
+  ]
+}

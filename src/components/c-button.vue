@@ -1,8 +1,18 @@
 <template>
-    <button class="c-button">默认</button>
+    <button class="c-button" :class="{[`icon-${iconPosition}`]: true}">
+        <i :class="`cmade-icon ${icon}`"></i>
+            <slot></slot>
+    </button>
 </template>
 
 <script setup>
+import {defineProps} from 'vue'
+const props = defineProps({
+    icon: String,
+    iconPosition: String
+})
+
+console.log(props.iconPosition);
 
 </script>
 
@@ -22,7 +32,7 @@
         padding: 0 1em;
         font: inherit;
         border: 1px solid var(--color);
-        border-radius: var(--border-radius);
+        border-radius: var(--border-radius); 
         background-color: var(--button-bg);
     }
     .c-button:hover{
@@ -34,4 +44,21 @@
     .c-button:focus{
         outline: none;
     }
+    .cmade-icon{
+        margin-right: .1em;
+    }
+    .icon-right{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon-right > .cmade-icon{
+        order: 2;
+        margin-left: .1em;
+        margin-right: 0 ! important;
+    }
+
+
+
+
 </style>
