@@ -38,7 +38,6 @@ const props = defineProps({
 const emit = defineEmits()
 
 const init = () => {
-    console.log(props.disabled);
 }
 init()
 
