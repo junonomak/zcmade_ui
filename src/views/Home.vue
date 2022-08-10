@@ -18,6 +18,20 @@
             <c-input modelValue="五号"></c-input>
             <h2>{{sayhi}}</h2>
         </div>
+        <div class="row">
+            <c-row>
+                <c-col :span="2">1</c-col>
+                <c-col :span="21">2</c-col>
+                <c-col :span="1">3</c-col>
+            </c-row> 
+
+            <c-row>
+                <c-col>1</c-col>
+                <c-col>2</c-col>
+                <c-col>3</c-col>
+                <c-col>4</c-col>
+            </c-row>
+        </div>
     </div>
     
 </template>
