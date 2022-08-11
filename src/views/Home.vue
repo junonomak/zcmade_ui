@@ -26,10 +26,10 @@
             </c-row> 
 
             <c-row>
-                <c-col>1</c-col>
-                <c-col>2</c-col>
-                <c-col>3</c-col>
-                <c-col>4</c-col>
+                <c-col  :phone="{span:18, offset:0}">1</c-col>
+                <c-col  :phone="{span:2, offset:0}">2</c-col>
+                <c-col  :phone="{span:2, offset:0}">3</c-col>
+                <c-col  :phone="{span:2, offset:0}">4</c-col>
             </c-row>
         </div>
     </div>

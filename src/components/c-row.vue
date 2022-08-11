@@ -1,6 +1,6 @@
 <!--  -->
 <template>
-    <div class="row" :style="gutter && gutterStyle">
+    <div class="row" :style="gutterStyle">
         <slot></slot>
     </div>
 </template>
@@ -8,20 +8,21 @@
 <script setup lang='ts'>
 import { defineProps, provide, ref, computed} from 'vue';
 const props = defineProps({ 
-    gutter: null
+    gutter: {
+        type: [String, Number],
+        default: 0
+    }
 })
 
-const init = () => {
-    
+const init = (): void => {
 }
 init()
 
 const gutterStyle = computed(() => {
-    return 'margin: 0px -' + props.gutter/2 + 'px'
+    return  props.gutter ? `margin: 0px ${-props.gutter / 2}px` : '';
 })
 
 const fatherGutter = ref(props.gutter)
-// console.log(fatherGutter.value);
  provide('gutter', fatherGutter);
 
 
