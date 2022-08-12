@@ -1,5 +1,5 @@
 <template>
-    <div class="content">
+    <div class="contents">
         <c-button icon="i-like" iconPosition="right">设置</c-button>
         <c-button :loading="true" iconPosition="right" icon="i-like">加载中</c-button>
         <div>
@@ -26,17 +26,51 @@
             </c-row> 
 
             <c-row>
-                <c-col  :phone="{span:18, offset:0}">1</c-col>
+                <c-col  :phone="{span:18}">1</c-col>
                 <c-col  :phone="{span:2, offset:0}">2</c-col>
                 <c-col  :phone="{span:2, offset:0}">3</c-col>
                 <c-col  :phone="{span:2, offset:0}">4</c-col>
             </c-row>
         </div>
+        <div class="layoutTest">
+            <c-layout style="height: 30vh; margin-top: 20px">
+                <c-header class="ldemo"></c-header>
+                <c-content class="ldemo"></c-content>
+                <c-footer class="ldemo"></c-footer>
+            </c-layout>
+
+            <c-layout style="margin-top: 20px">
+                <c-header></c-header>
+                <c-layout style="height: 100px">
+                    <c-sider></c-sider>
+                    <c-content></c-content>
+                </c-layout>
+                <c-footer></c-footer>
+            </c-layout>
+
+            <c-layout style="margin-top: 20px">
+                <c-header></c-header>
+                <c-layout style="height: 100px">
+                    <c-content></c-content>
+                    <c-sider></c-sider>
+                </c-layout>
+                <c-footer></c-footer>
+            </c-layout>
+
+            <c-layout style="height: 30vh;margin-top: 20px">
+                <c-sider></c-sider>
+                <c-layout>
+                    <c-header></c-header>
+                    <c-content></c-content>
+                    <c-footer></c-footer>
+                </c-layout>
+            </c-layout>
+        </div>
     </div>
     
 </template>
 
-<script setup>
+<script setup scoped>
 import {ref} from 'vue'
 
 const sayhi = ref('我是v-model')
@@ -51,7 +85,13 @@ const changeValue = (e) => {
 </script>
 
 <style scpoed>
-.content{
+.contents{
     margin: 20px;
+}
+.layoutTest{
+    margin-top: 30px;
+}
+.ldemo{
+    min-height: 50px;
 }
 </style>

@@ -8,7 +8,7 @@
 <script setup lang='ts'>
 </script>
 
-<style scope>
+<style scpoed>
 .group-button{
     display: inline-flex;
     justify-content: center;
@@ -30,6 +30,4 @@
     position: relative;
     z-index: 1;
 }
-
-
 </style>

@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-import cIcon from './c-icon.vue'
+import cIcon from '../Icon/c-icon.vue'
 import { defineProps, defineEmits } from 'vue';
 
 const changeValue = (e) => {

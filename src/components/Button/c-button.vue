@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import cIcon from '../components/c-icon.vue'
+import cIcon from '../Icon/c-icon.vue'
 import {defineProps, ref} from 'vue'
 const props = defineProps({
     icon: String,

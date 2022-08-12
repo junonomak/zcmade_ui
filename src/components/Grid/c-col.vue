@@ -3,9 +3,7 @@
     <div class="col" 
     :class="colClass"
     :style="gutterStyle">
-        <div class="box">
-            <slot></slot>
-        </div>
+        <slot></slot>
     </div>
 </template>
 
@@ -88,7 +86,7 @@ const props = defineProps({
 
 const gutter:any = inject('gutter')
 const gutterStyle = computed(() => {
-    return gutter.value ? 'padding: 0px ' + <number>gutter.value/2 + 'px' : ''
+    return gutter.value ? 'padding: 0px ' + gutter.value/2 + 'px' : ''
 })
 
 const colClass = computed(() => {
