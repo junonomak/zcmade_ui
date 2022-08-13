@@ -1,5 +1,10 @@
 <template>
     <div class="contents">
+
+        <div class="toast-demo">
+            <c-button @click="onlick">toast</c-button>
+        </div>
+
         <c-button icon="i-like" iconPosition="right">设置</c-button>
         <c-button :loading="true" iconPosition="right" icon="i-like">加载中</c-button>
         <div>
@@ -26,10 +31,10 @@
             </c-row> 
 
             <c-row>
-                <c-col  :phone="{span:18}">1</c-col>
-                <c-col  :phone="{span:2, offset:0}">2</c-col>
-                <c-col  :phone="{span:2, offset:0}">3</c-col>
-                <c-col  :phone="{span:2, offset:0}">4</c-col>
+                <c-col :phone="{span:18}">1</c-col>
+                <c-col :phone="{span:2, offset:0}">2</c-col>
+                <c-col :phone="{span:2, offset:0}">3</c-col>
+                <c-col :phone="{span:2, offset:0}">4</c-col>
             </c-row>
         </div>
         <div class="layoutTest">
@@ -66,17 +71,21 @@
                 </c-layout>
             </c-layout>
         </div>
+
+
     </div>
     
 </template>
 
 <script setup scoped>
-import {ref} from 'vue'
+import {ref, onMounted, getCurrentInstance} from 'vue'
+import { Toast } from '../components/Toast/toast.ts'
 
 const sayhi = ref('我是v-model')
-setInterval(()=>{
-    sayhi.value += '1'
-},1000)
+
+const onlick = () => {
+    Toast({visible: true, text: '我是一个toast点击事件', showClose: true, center: true, delay: 3})
+}
 
 
 const changeValue = (e) => {
@@ -93,5 +102,8 @@ const changeValue = (e) => {
 }
 .ldemo{
     min-height: 50px;
+}
+.toast-demo{
+    margin-top: 30px;
 }
 </style>

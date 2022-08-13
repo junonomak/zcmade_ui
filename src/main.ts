@@ -18,6 +18,10 @@ import cFooter from './components/Layout/c-footer.vue'
 import cHeader from './components/Layout/c-header.vue'
 import cContent from './components/Layout/c-content.vue'
 import cSider from './components/Layout/c-sider.vue'
+// import cToast from './components/Toast/c-toast.vue'
+// import Toast from './components/Toast/toast'
+
+
 
 app.component("cButton",cButton);
 app.component("cIcon",cIcon);
@@ -30,6 +34,19 @@ app.component("cFooter",cFooter);
 app.component("cHeader",cHeader);
 app.component("cContent",cContent);
 app.component("cSider",cSider);
+// app.component("cToast",cToast);
+
+
+const a = () => {
+    console.log('挂载了方法a');
+}
+
+app.config.globalProperties.$a = a 
+// app.config.globalProperties.$Toast = Toast
+
+
+
+
 
 app.use(store).use(router).mount('#app')
 
