@@ -11,7 +11,7 @@
 </template>
 
 <script setup>   
-import { defineProps, reactive, computed, onMounted, ref } from 'vue'
+import { defineProps, onMounted, ref } from 'vue'
 import cIcon from '../Icon/c-icon.vue'
 
 const props = defineProps({
@@ -56,7 +56,7 @@ onMounted(() => {
         _visible.value = true
         startTimer()
     }
-})
+}) 
 
 const emits = defineEmits(['destroy']);
 const handleClose = () => {
@@ -79,7 +79,6 @@ const clearTimer = () => {
 };
 </script>
 
-
 <style lang='scss' scoped>
 .toast{
     position: fixed;
@@ -93,7 +92,6 @@ const clearTimer = () => {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
     padding: 15px;
     transition: top 0.3s;
-
 }
 .inside-toast{
     display: flex;

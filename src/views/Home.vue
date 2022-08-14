@@ -1,8 +1,34 @@
 <template>
     <div class="contents">
 
+        <div class="tabs-demo">
+                <!-- 这边等同于:title="pageTitle" @update:title="pageTitle = $event" -->
+                <!-- 子组件可以接受v-model传入的值，并通过emits('update:selected')传出 -->
+            <c-tabs>
+                <c-tabs-head v-model:selected="selectedValue">
+                    <c-tabs-items name="onestar">
+                        1
+                    </c-tabs-items>
+                    <c-tabs-items name="1970s">
+                        2
+                    </c-tabs-items>
+                    <c-tabs-items name="jackstar">
+                        3
+                    </c-tabs-items>
+                </c-tabs-head>
+                <c-tabs-body>
+                    <c-tabs-content name="onestar">
+                    </c-tabs-content>
+                    <c-tabs-content name="1970s">
+                    </c-tabs-content>
+                    <c-tabs-content name="jackstar">
+                    </c-tabs-content>
+                </c-tabs-body>
+            </c-tabs>
+        </div>
+
         <div class="toast-demo">
-            <c-button @click="onlick">toast</c-button>
+            <c-button @click="onlick">我是绑定了toast的button</c-button>
         </div>
 
         <c-button icon="i-like" iconPosition="right">设置</c-button>
@@ -78,7 +104,7 @@
 </template>
 
 <script setup scoped>
-import {ref, onMounted, getCurrentInstance} from 'vue'
+import {ref} from 'vue'
 import { Toast } from '../components/Toast/toast.ts'
 
 const sayhi = ref('我是v-model')
@@ -91,6 +117,8 @@ const onlick = () => {
 const changeValue = (e) => {
     console.log(e);
 }
+
+const selectedValue = ref('onestar')
 </script>
 
 <style scpoed>

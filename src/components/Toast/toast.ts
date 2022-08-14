@@ -2,13 +2,12 @@ import {  createApp, createVNode, render, VNode  } from "vue";
 import toast from "./c-toast.vue";
 
 const toastQueue: Array<VNode> = [];
-
 const app = createApp(toast);
 const dom = document.createElement("div");
 const instant:any = app.mount(dom); 
 document.body.appendChild(dom)
-
 let currentIndex = 1
+
 const Toast = (options: object) => {
     const _options = {
         ...options,
@@ -23,16 +22,17 @@ const createToast = (options: any) => {
     const vm = createVNode(toast, {
         ...options,
         top: 10 + toastQueue.length * 60,
+        // 通过createVNode传入的props中的函数可以通过emits的方式进行调用，调用函数名字要加on
         onDestroy: () => {
             onDestroy(options.id, div);
         },
     })
     toastQueue.push(vm)
     render(vm, div);
-    console.log(vm, div, toast);
 }
 
 const onDestroy = (id: string, wrapper: HTMLDivElement) => {  
+    console.log('我被触发了');
     // 在dom中移除节点 
     render(null, wrapper);
     wrapper.remove();
@@ -50,10 +50,11 @@ const onDestroy = (id: string, wrapper: HTMLDivElement) => {
     // 让组件的上升对应的高度
     // @ts-ignore
     toastQueue[i].component.props.top = parseInt(toastQueue[i].el?.style.top) - h - 60;
+    // @ts-ignore
+    // console.log(toastQueue[i]);
     }
 }
 
 // 总结一下什么意思：先搞好组件和样式
 // 在新建的ts文件中导出一个方法，这个方法用来向toast传入props，并且创建实例并挂载到dom上
-
 export { Toast }
