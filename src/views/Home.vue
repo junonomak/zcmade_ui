@@ -4,26 +4,21 @@
         <div class="tabs-demo">
                 <!-- 这边等同于:title="pageTitle" @update:title="pageTitle = $event" -->
                 <!-- 子组件可以接受v-model传入的值，并通过emits('update:selected')传出 -->
-            <c-tabs>
-                <c-tabs-head v-model:selected="selectedValue">
-                    <c-tabs-items name="onestar">
-                        1
+            <c-tabs v-model:selected="selectedValue">
+                <c-tabs-head>
+                    <c-tabs-items name="onestar" :height="500">
+                        我是内容1
                     </c-tabs-items>
-                    <c-tabs-items name="1970s">
-                        2
+                    <c-tabs-items name="1970s" :height="300">
+                        我2
                     </c-tabs-items>
                     <c-tabs-items name="jackstar">
-                        3
+                        我是内容3
+                    </c-tabs-items>
+                    <c-tabs-items name="啊这" disable>
+                        4
                     </c-tabs-items>
                 </c-tabs-head>
-                <c-tabs-body>
-                    <c-tabs-content name="onestar">
-                    </c-tabs-content>
-                    <c-tabs-content name="1970s">
-                    </c-tabs-content>
-                    <c-tabs-content name="jackstar">
-                    </c-tabs-content>
-                </c-tabs-body>
             </c-tabs>
         </div>
 

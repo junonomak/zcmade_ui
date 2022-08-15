@@ -23,7 +23,7 @@ const gutterStyle = computed(() => {
 })
 
 const fatherGutter = ref(props.gutter)
- provide('gutter', fatherGutter);    
+provide('gutter', fatherGutter);    
 
 
 </script>

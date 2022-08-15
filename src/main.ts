@@ -18,12 +18,10 @@ import cFooter from './components/Layout/c-footer.vue'
 import cHeader from './components/Layout/c-header.vue'
 import cContent from './components/Layout/c-content.vue'
 import cSider from './components/Layout/c-sider.vue'
-import {Toast} from './components/Toast/toast'
+import {Toast} from './components/Toast/toast.js'
 import cTabs from './components/Tabs/c-tabs.vue'
 import cTabsHead from './components/Tabs/c-tabs-head.vue'
 import cTabsItems from './components/Tabs/c-tabs-items.vue'
-import cTabsBody from './components/Tabs/c-tabs-body.vue'
-import cTabsContent from './components/Tabs/c-tabs-content.vue'
 
 app.component("cButton",cButton);
 app.component("cIcon",cIcon);
@@ -39,8 +37,6 @@ app.component("cSider",cSider);
 app.component("cTabs",cTabs);
 app.component("cTabsHead",cTabsHead);
 app.component("cTabsItems",cTabsItems);
-app.component("cTabsBody",cTabsBody);
-app.component("cTabsContent",cTabsContent);
 
 
 app.use(store).use(router).mount('#app')
