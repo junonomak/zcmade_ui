@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang='ts'>
-import { VNode, useSlots, Component, computed} from 'vue';
+import { VNode, useSlots, computed} from 'vue';
 import cSide from './c-sider.vue'
 
 // 使用slots.default获取子节点
@@ -22,7 +22,7 @@ const isHasAside = computed(() => {
     } else {
         return false;  
     }
-});
+})
 </script>
 
 <style lang='scss' scoped>

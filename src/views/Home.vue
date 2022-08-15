@@ -1,40 +1,43 @@
 <template>
     <div class="contents">
 
+        <div class="card-demo" style="margin-bottom:20px">
+            <c-card title="我是一个标题">我是第一个的内容</c-card>
+            <c-card title="我是hover-card" hoverable></c-card>
+            <c-card title="我是shadow-card" shadow></c-card>
+        </div>
+
         <div class="tabs-demo">
                 <!-- 这边等同于:title="pageTitle" @update:title="pageTitle = $event" -->
                 <!-- 子组件可以接受v-model传入的值，并通过emits('update:selected')传出 -->
             <c-tabs v-model:selected="selectedValue">
                 <c-tabs-head>
-                    <c-tabs-items name="onestar" :height="500">
-                        我是内容1
+                    <c-tabs-items name="onestar" :height="200">
+                        <div class="toast-demo">
+                            <c-button @click="onlick">我是绑定了toast的button</c-button>
+                        </div>
+
+                        <c-button icon="i-like" iconPosition="right">设置</c-button>
+                        <c-button :loading="true" iconPosition="right" icon="i-like">加载中</c-button>
+                        <div>
+                            <c-group-button>
+                                <c-button icon="i-left">上一页</c-button>
+                                <c-button >设置</c-button>
+                                <c-button icon="i-right" iconPosition="right">下一页</c-button>
+                            </c-group-button>
+                        </div>
                     </c-tabs-items>
                     <c-tabs-items name="1970s" :height="300">
                         我2
                     </c-tabs-items>
-                    <c-tabs-items name="jackstar">
+                    <c-tabs-items name="jackstar" disable>
                         我是内容3
-                    </c-tabs-items>
-                    <c-tabs-items name="啊这" disable>
-                        4
                     </c-tabs-items>
                 </c-tabs-head>
             </c-tabs>
         </div>
 
-        <div class="toast-demo">
-            <c-button @click="onlick">我是绑定了toast的button</c-button>
-        </div>
 
-        <c-button icon="i-like" iconPosition="right">设置</c-button>
-        <c-button :loading="true" iconPosition="right" icon="i-like">加载中</c-button>
-        <div>
-            <c-group-button>
-                <c-button icon="i-left">上一页</c-button>
-                <c-button >设置</c-button>
-                <c-button icon="i-right" iconPosition="right">下一页</c-button>
-            </c-group-button>
-        </div>
         <div style="margin-top: 30px">
             <c-input modelValue="一号" disabled></c-input>
             <c-input modelValue="二号" readonly></c-input>
@@ -99,8 +102,8 @@
 </template>
 
 <script setup scoped>
-import {ref} from 'vue'
 import { Toast } from '../components/Toast/toast.ts'
+import {ref} from 'vue'
 
 const sayhi = ref('我是v-model')
 
@@ -108,11 +111,9 @@ const onlick = () => {
     Toast({visible: true, text: '我是一个toast点击事件', showClose: true, center: true, delay: 3})
 }
 
-
 const changeValue = (e) => {
     console.log(e);
 }
-
 const selectedValue = ref('onestar')
 </script>
 

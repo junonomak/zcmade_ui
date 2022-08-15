@@ -42,7 +42,7 @@ provide('selectChange', selectChange)
     width: 100%;
     border: 1px solid rgb(237, 237, 237);
     border-radius: 4px;
-    padding: 10px;
+    padding: 16px;
     position: relative;
 }
 </style>

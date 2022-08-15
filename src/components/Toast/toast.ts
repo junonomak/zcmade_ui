@@ -32,7 +32,6 @@ const createToast = (options: any) => {
 }
 
 const onDestroy = (id: string, wrapper: HTMLDivElement) => {  
-    console.log('我被触发了');
     // 在dom中移除节点 
     render(null, wrapper);
     wrapper.remove();

@@ -22,6 +22,7 @@ import {Toast} from './components/Toast/toast.js'
 import cTabs from './components/Tabs/c-tabs.vue'
 import cTabsHead from './components/Tabs/c-tabs-head.vue'
 import cTabsItems from './components/Tabs/c-tabs-items.vue'
+import cCard from './components/Card/c-card.vue'
 
 app.component("cButton",cButton);
 app.component("cIcon",cIcon);
@@ -37,6 +38,7 @@ app.component("cSider",cSider);
 app.component("cTabs",cTabs);
 app.component("cTabsHead",cTabsHead);
 app.component("cTabsItems",cTabsItems);
+app.component("cCard",cCard);
 
 
 app.use(store).use(router).mount('#app')
