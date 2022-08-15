@@ -1,6 +1,11 @@
 <template>
     <div class="contents">
 
+        <div class="switch-demo" style="margin-bottom: 20px">
+            <c-switch v-model:switchValue="switchValue" ></c-switch>
+            <c-switch v-model:switchValue="switchValue2" disable></c-switch>
+        </div>
+
         <div class="card-demo" style="margin-bottom:20px">
             <c-card title="我是一个标题">我是第一个的内容</c-card>
             <c-card title="我是hover-card" hoverable></c-card>
@@ -103,7 +108,7 @@
 
 <script setup scoped>
 import { Toast } from '../components/Toast/toast.ts'
-import {ref} from 'vue'
+import {ref, watch} from 'vue'
 
 const sayhi = ref('我是v-model')
 
@@ -115,6 +120,10 @@ const changeValue = (e) => {
     console.log(e);
 }
 const selectedValue = ref('onestar')
+
+const switchValue = ref(false)
+const switchValue2 = ref(false)
+
 </script>
 
 <style scpoed>

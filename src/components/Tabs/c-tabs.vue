@@ -12,8 +12,7 @@ const props = defineProps({
     selected: {
         type: String,
         required: true
-    },
-
+    }
 })
 
 const fatherSelected = ref(props.selected)
@@ -25,8 +24,7 @@ watch(
     {immediate: false, deep: false}
 )
 
-const emits = defineEmits()
-
+const emits = defineEmits(['update:selected'])
 const selectChange = (value) => {
     emits('update:selected', value)
 }
