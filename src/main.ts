@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import './assets/iconfont/iconfont.css' // fonticon 图标库
+import './assets/icon-font/iconfont.css' // fonticon 图标库
 
 const app = createApp(App)
 
@@ -24,6 +24,8 @@ import cTabsHead from './components/Tabs/c-tabs-head.vue'
 import cTabsItems from './components/Tabs/c-tabs-items.vue'
 import cCard from './components/Card/c-card.vue'
 import cSwitch from './components/Switch/c-switch.vue'
+import cDialog from './components/Dialog/c-dialog.vue'
+import cPopover from './components/Popover/c-popover.vue'
 
 app.component("cButton",cButton);
 app.component("cIcon",cIcon);
@@ -41,6 +43,8 @@ app.component("cTabsHead",cTabsHead);
 app.component("cTabsItems",cTabsItems);
 app.component("cCard",cCard);
 app.component("cSwitch",cSwitch);
+app.component("cDialog",cDialog);
+app.component("cPopover",cPopover);
 
 
 app.use(store).use(router).mount('#app')

@@ -1,7 +1,7 @@
 <template>
     <button class="c-button" :class="{[`icon-${iconPosition}`]: true}" @click="loadingCheck">
         <!-- <i :class="{[`cmade-icon ${iconname}`]: true, 'button-loading': loading}"></i> -->
-        <c-icon :class="{'button-loading': iconname === 'i-loading'}" :name="iconname"></c-icon>
+        <c-icon :class="{'button-loading': iconname === 'loading'}" :name="iconname"></c-icon>
         <slot></slot>
     </button>
 </template>
@@ -23,7 +23,7 @@ init()
 
 const loadingCheck = () => {
     if(props.loading === true){
-        iconname.value = 'i-loading'
+        iconname.value = 'loading'
     }
 }
 

@@ -1,6 +1,25 @@
 <template>
     <div class="contents">
 
+        <div class="dialog-demo">
+            <c-button icon="like" iconPosition="right" @click="dialogClick">触发dialog的按钮1</c-button><br>
+            <c-button icon="like" iconPosition="right" @click="dialogClick2">包含backgroundCloseAble的按钮2</c-button><br>
+            <c-button icon="like" iconPosition="right" @click="dialogClick3">包含确定和取消函数的按钮</c-button>
+            <c-dialog v-model:visible="dialogVisible">
+                <h2>我是内容</h2>
+            </c-dialog>
+            <c-dialog v-model:visible="dialogVisible2" backgroundCloseAble>
+                <h2>我包含backgroundCloseAble</h2>
+            </c-dialog>
+            <c-dialog v-model:visible="dialogVisible3" :confirm="onConfirm" :cancel="onCancel">
+                <h2>包含确定和取消函数</h2>
+            </c-dialog>
+        </div>
+
+        <div class="popover-demo" style="margin-bottom: 20px">
+            <!-- <c-popover v-model:visible="pvisibleVlaue"></c-popover> -->
+        </div>
+
         <div class="switch-demo" style="margin-bottom: 20px">
             <c-switch v-model:switchValue="switchValue" ></c-switch>
             <c-switch v-model:switchValue="switchValue2" disable></c-switch>
@@ -8,8 +27,8 @@
 
         <div class="card-demo" style="margin-bottom:20px">
             <c-card title="我是一个标题">我是第一个的内容</c-card>
-            <c-card title="我是hover-card" hoverable></c-card>
-            <c-card title="我是shadow-card" shadow></c-card>
+            <c-card title="我是hover-card" hoverable>第二个的内容</c-card>
+            <c-card title="我是shadow-card" shadow>第三个的内容</c-card>
         </div>
 
         <div class="tabs-demo">
@@ -18,17 +37,14 @@
             <c-tabs v-model:selected="selectedValue">
                 <c-tabs-head>
                     <c-tabs-items name="onestar" :height="200">
-                        <div class="toast-demo">
-                            <c-button @click="onlick">我是绑定了toast的button</c-button>
-                        </div>
-
-                        <c-button icon="i-like" iconPosition="right">设置</c-button>
-                        <c-button :loading="true" iconPosition="right" icon="i-like">加载中</c-button>
+                        <c-button @click="onlick">我是绑定了toast的button</c-button><br>
+                        <c-button icon="like" iconPosition="right">设置</c-button>
+                        <c-button :loading="true" iconPosition="right" icon="like">加载中</c-button>
                         <div>
                             <c-group-button>
-                                <c-button icon="i-left">上一页</c-button>
-                                <c-button >设置</c-button>
-                                <c-button icon="i-right" iconPosition="right">下一页</c-button>
+                                <c-button icon="left">上一页</c-button>
+                                <c-button icon="setting">设置</c-button>
+                                <c-button icon="right" iconPosition="right">下一页</c-button>
                             </c-group-button>
                         </div>
                     </c-tabs-items>
@@ -124,6 +140,26 @@ const selectedValue = ref('onestar')
 const switchValue = ref(false)
 const switchValue2 = ref(false)
 
+
+const dialogVisible = ref(false)
+const dialogClick = () => {
+    dialogVisible.value = !dialogVisible.value
+}
+const dialogVisible2 = ref(false)
+const dialogClick2 = () => {
+    dialogVisible2.value = !dialogVisible2.value
+}
+const dialogVisible3 = ref(false)
+const dialogClick3 = () => {
+    dialogVisible3.value = !dialogVisible3.value
+}
+const onConfirm = () => {
+    console.log('我是确定我被触发了');
+    return false
+}
+const onCancel = () => {
+    console.log('我是取消我被触发了');
+}
 </script>
 
 <style scpoed>
@@ -135,8 +171,5 @@ const switchValue2 = ref(false)
 }
 .ldemo{
     min-height: 50px;
-}
-.toast-demo{
-    margin-top: 30px;
 }
 </style>

@@ -45,6 +45,7 @@ const itemsClick = () => {
 </script>
 
 <style lang='scss' scoped>
+
 .tabsItem{
     margin-right: 20px;
     padding: 8px 0;
@@ -54,9 +55,9 @@ const itemsClick = () => {
     transition: all 0.4s;
 }
 .selectedClass{
-    color: rgb(53, 23, 0);
+    color: black;
     font-weight: 500;
-    border-bottom: 1px solid rgb(53, 23, 0);
+    border-bottom: 1px solid black;
 }
 .content{
     position: absolute;
@@ -66,7 +67,6 @@ const itemsClick = () => {
 .tabs-disable{
     pointer-events: none;
     color: rgb(172, 172, 172);
-
 }
 .tabs-disable-outside{
     cursor: not-allowed !important;

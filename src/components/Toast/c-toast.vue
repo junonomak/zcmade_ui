@@ -3,7 +3,7 @@
     <div class="toast" v-show="_visible" :style="`top: ${top}px;`" @mouseenter="clearTimer" @mouseleave="startTimer">
         <div class="inside-toast">
             <span :style="center && 'text-align: center;'">{{text}}</span>
-            <c-icon v-if="showClose" class="toast-icon" name="i-loading" @click="handleClose"></c-icon>
+            <c-icon v-if="showClose" class="toast-icon" name="delete" @click="handleClose"></c-icon>
         </div>
 
     </div>

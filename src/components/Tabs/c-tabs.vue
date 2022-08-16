@@ -42,5 +42,7 @@ provide('selectChange', selectChange)
     border-radius: 4px;
     padding: 16px;
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 5px 10px;
+    
 }
 </style>
