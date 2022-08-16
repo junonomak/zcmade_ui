@@ -56,6 +56,7 @@ const onconfirm = () => {
     // 判断的时候会执行一遍
     if(props.confirm?.() !== false){
         onclose()
+        
     }
 }
 

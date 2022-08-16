@@ -1,7 +1,10 @@
 <template>
     <div class="contents">
+        
 
-        <div class="dialog-demo">
+
+
+        <div class="dialog-demo" style="margin-bottom: 20px">
             <c-button icon="like" iconPosition="right" @click="dialogClick">触发dialog的按钮1</c-button><br>
             <c-button icon="like" iconPosition="right" @click="dialogClick2">包含backgroundCloseAble的按钮2</c-button><br>
             <c-button icon="like" iconPosition="right" @click="dialogClick3">包含确定和取消函数的按钮</c-button>
@@ -16,8 +19,19 @@
             </c-dialog>
         </div>
 
-        <div class="popover-demo" style="margin-bottom: 20px">
-            <!-- <c-popover v-model:visible="pvisibleVlaue"></c-popover> -->
+        <div class="popover-demo" style="margin-bottom: 20px;">
+            <c-popover trigger="hover">
+                <template v-slot:content>
+                    <div>我是啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊popover</div>
+                </template>
+                <c-button icon="setting"></c-button>
+            </c-popover>
+            <c-popover trigger="click">
+                <template v-slot:content>
+                    <div>我是popover的内容2</div>
+                </template>
+                <c-button icon="setting">aaaa</c-button>
+            </c-popover>
         </div>
 
         <div class="switch-demo" style="margin-bottom: 20px">

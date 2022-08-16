@@ -42,7 +42,7 @@ const loadingCheck = () => {
         --button-bg: white;
         --button-active-bg: #eee;
         --border-radius: 4px;
-        --color: #999;
+        --color: rgb(202, 202, 202);
         --boder-color-hover: #666;
     }
     .c-button{
@@ -57,6 +57,8 @@ const loadingCheck = () => {
         justify-content: center;
         align-items: center;
         vertical-align: middle;
+        transition: all 0.3s;
+
     }
     .c-button:hover{
         border-color: var(--boder-color-hover);

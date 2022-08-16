@@ -56,6 +56,7 @@ $border-shadow-color: rgba(0, 0 , 0, 0.5);
     position: relative;
     font-size: $font-size;
     display: inline-block;
+    transition: all 0.3s;
     > input {
         height: $height;
         border: 1px solid $border-color;
