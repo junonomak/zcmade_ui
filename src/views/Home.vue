@@ -2,8 +2,6 @@
     <div class="contents">
         
 
-
-
         <div class="dialog-demo" style="margin-bottom: 20px">
             <c-button icon="like" iconPosition="right" @click="dialogClick">触发dialog的按钮1</c-button><br>
             <c-button icon="like" iconPosition="right" @click="dialogClick2">包含backgroundCloseAble的按钮2</c-button><br>
@@ -24,13 +22,13 @@
                 <template v-slot:content>
                     <div>我是啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊popover</div>
                 </template>
-                <c-button icon="setting"></c-button>
+                <c-button icon="setting">我是hover-popover1</c-button>
             </c-popover>
             <c-popover trigger="click">
                 <template v-slot:content>
                     <div>我是popover的内容2</div>
                 </template>
-                <c-button icon="setting">aaaa</c-button>
+                <c-button icon="setting">我是click-popover2</c-button>
             </c-popover>
         </div>
 

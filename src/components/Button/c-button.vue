@@ -58,7 +58,7 @@ const loadingCheck = () => {
         align-items: center;
         vertical-align: middle;
         transition: all 0.3s;
-
+        cursor:pointer;
     }
     .c-button:hover{
         border-color: var(--boder-color-hover);

@@ -4,7 +4,8 @@
         <div class="content-box" v-show="visible">
             <slot name="content"></slot>
         </div>
-        <div class="popover-trigger" @click="triggerClick" 
+        <div class="popover-trigger"
+        @click="triggerClick"
         @mouseenter="enterTrigger" 
         @mouseleave="leaveTrigger">
             <slot></slot>
@@ -19,8 +20,7 @@ const props = defineProps({
     trigger: {
         type: String,
         default: 'click'
-    },
-
+    }
 })
 
 const visible = ref(false)
@@ -33,7 +33,8 @@ const triggerClick = () => {
         visible.value = !visible.value
         setTimeout(() => {
             closetrigger()
-        }, 1000);
+        }, 1500);
+        
     }
 }
 const enterTrigger = () => {
@@ -45,7 +46,7 @@ const leaveTrigger = () => {
     if(props.trigger === 'hover'){
         setTimeout(() => {
             closetrigger()
-        }, 1000);
+        }, 1500);
     }
 }
 
