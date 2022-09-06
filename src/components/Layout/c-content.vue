@@ -1,7 +1,7 @@
 <!--  -->
 <template>
     <div class="content">
-        <h2>content</h2>
+        <slot></slot>
     </div>
 </template>
 
@@ -11,7 +11,6 @@
 
 <style lang='scss' scoped>
 .content{
-    border: 1px solid red;
     flex: 1;
 }
 </style>

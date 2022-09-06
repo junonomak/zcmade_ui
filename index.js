@@ -18,6 +18,6 @@ import cSwitch from './src/components/Switch/c-switch.vue'
 import cDialog from './src/components/Dialog/c-dialog.vue'
 import cPopover from './src/components/Popover/c-popover.vue'
 
-const all_components = { cButton, cIcon, cGroupButton, cInput, cCol, cRow, cLayout, cFooter, cHeader, cContent, cSider, Toast, cTabs, cTabsHead, cTabsItems, cCard, cSwitch, cDialog, cPopover }
+const all_components = { cButton, cIcon, cGroupButton, cInput, cCol, cRow, cLayout, cFooter, cHeader, cContent, cSider, cToast, cTabs, cTabsHead, cTabsItems, cCard, cSwitch, cDialog, cPopover }
 export { cButton, cIcon, cGroupButton, cInput, cCol, cRow, cLayout, cFooter, cHeader, cContent, cSider, Toast, cTabs, cTabsHead, cTabsItems, cCard, cSwitch, cDialog, cPopover }
 export { all_components }

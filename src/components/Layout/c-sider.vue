@@ -1,7 +1,7 @@
 <!--  -->
 <template>
     <div class="sider">
-        <h2>sider</h2>
+        <slot></slot>
     </div>
 </template>
 
@@ -10,7 +10,4 @@
 </script>
 
 <style lang='scss' scoped>
-.sider{
-    border: 1px solid red;
-}
 </style>

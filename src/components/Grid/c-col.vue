@@ -106,9 +106,7 @@ const colClass = computed(() => {
 
 <style lang='scss' scoped>
 .col{
-    height: 100px;
     width: 50%;
-
     $class: col-;
     @for $n from 1 through 24 {
         &.#{$class}#{$n} {
@@ -192,8 +190,4 @@ const colClass = computed(() => {
         }
     }
 }
-.box{
-    border: 1px solid black;
-}
-
 </style>

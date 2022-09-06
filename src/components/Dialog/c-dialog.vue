@@ -18,6 +18,7 @@
 </template>
 
 <script setup lang='ts'>
+import cIcon from '../Icon/c-icon.vue'
 import { ref, defineEmits  } from 'vue'
 
 const props = defineProps({

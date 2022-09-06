@@ -8,7 +8,7 @@ const instant:any = app.mount(dom);
 document.body.appendChild(dom)
 let currentIndex = 1
 
-const Toast = (options: object) => {
+const cToast = (options: object) => {
     const _options = {
         ...options,
         id: `options-id-${currentIndex++}`
@@ -56,4 +56,4 @@ const onDestroy = (id: string, wrapper: HTMLDivElement) => {
 
 // 总结一下什么意思：先搞好组件和样式
 // 在新建的ts文件中导出一个方法，这个方法用来向toast传入props，并且创建实例并挂载到dom上
-export { Toast }
+export { cToast }

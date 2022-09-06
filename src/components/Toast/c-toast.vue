@@ -11,8 +11,8 @@
 </template>
 
 <script setup>   
-import { defineProps, onMounted, ref } from 'vue'
 import cIcon from '../Icon/c-icon.vue'
+import { defineProps, onMounted, ref } from 'vue'
 
 const props = defineProps({
     visible: {

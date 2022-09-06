@@ -18,7 +18,7 @@ import cFooter from './components/Layout/c-footer.vue'
 import cHeader from './components/Layout/c-header.vue'
 import cContent from './components/Layout/c-content.vue'
 import cSider from './components/Layout/c-sider.vue'
-import {Toast} from './components/Toast/toast.js'
+import {cToast} from './components/Toast/toast'
 import cTabs from './components/Tabs/c-tabs.vue'
 import cTabsHead from './components/Tabs/c-tabs-head.vue'
 import cTabsItems from './components/Tabs/c-tabs-items.vue'
@@ -28,7 +28,6 @@ import cDialog from './components/Dialog/c-dialog.vue'
 import cPopover from './components/Popover/c-popover.vue'
 
 app.component("cButton",cButton);
-app.component("cIcon",cIcon);
 app.component("cGroupButton",cGroupButton);
 app.component("cInput",cInput);
 app.component("cCol",cCol);

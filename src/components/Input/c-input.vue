@@ -3,7 +3,7 @@
     <div class="wrapper" :class="{'inputError': error}">
         <input :value="modelValue" @input="emit('update:modelValue', $event.target.value)" :disabled="disabled" :readonly="readonly">
         <div class="errorMes">
-            <c-icon name="i-setting" v-if="error"></c-icon>
+            <c-icon name="error" v-if="error"></c-icon>
             {{error}}
         </div>
     </div>

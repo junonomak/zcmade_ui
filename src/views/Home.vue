@@ -1,6 +1,10 @@
 <template>
     <div class="contents">
-        
+
+
+        <div style="margin-bottom: 100px;">
+            <c-todo-list></c-todo-list>
+        </div>
 
         <div class="dialog-demo" style="margin-bottom: 20px">
             <c-button icon="like" iconPosition="right" @click="dialogClick">触发dialog的按钮1</c-button><br>
@@ -86,7 +90,6 @@
                 <c-col span="14">2</c-col>
                 <c-col span="8">3</c-col>
             </c-row> 
-
             <c-row>
                 <c-col :phone="{span:18}">1</c-col>
                 <c-col :phone="{span:2, offset:0}">2</c-col>
@@ -135,13 +138,14 @@
 </template>
 
 <script setup scoped>
-import { Toast } from '../components/Toast/toast.ts'
+import { cToast } from '../components/Toast/toast.ts'
+import cTodoList from '../components/TodoList/c-todoList.vue'
 import {ref, watch} from 'vue'
 
 const sayhi = ref('我是v-model')
 
 const onlick = () => {
-    Toast({visible: true, text: '我是一个toast点击事件', showClose: true, center: true, delay: 3})
+    cToast({visible: true, text: '我是一个toast点击事件', showClose: true, center: true, delay: 3})
 }
 
 const changeValue = (e) => {
